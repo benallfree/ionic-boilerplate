@@ -1,0 +1,9 @@
+
+<ion-header-bar class="bar-positive">
+<h1 class="title">Yoga In Your Park</h1></ion-header-bar>
+<ion-content class="padding">
+<a ng-click="new()" class="button button-block">New Episode</a>
+<div class="list">
+<a ng-repeat="episode in podcast.episodes | orderByEpisode" ng-click="go(episode.slug)" class="item item-icon-left">
+<i ng-if="!episode.published_at" class="icon"></i>
+<i ng-if="episode.published_at" class="icon ion-ios-people balanced"></i><%episode.title%></a></div></ion-content>
