@@ -34,6 +34,8 @@ echo "Building $TS"
 
 ROOT=$CORDOVA_ROOT
 
+pushd "$ROOT"
+
 BUILD=$ROOT/build
 SRC=$ROOT/src
 APP=$SRC/coffee/index.coffee
@@ -62,7 +64,9 @@ wait
 cp -r "$BUILD"/* "$WWW"
 ionic emulate ios
 
-$ROOT/osascript
+$ROOT/scripts/osascript
+
+popd
 
 # wait
 #

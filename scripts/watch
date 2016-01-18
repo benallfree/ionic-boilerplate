@@ -1,0 +1,39 @@
+#!/bin/bash
+set -x
+
+
+function upsearch () {
+  slashes=${PWD//[^\/]/}
+  directory="$PWD"
+  for (( n=${#slashes}; n>0; --n ))
+  do
+    test -e "$directory/$1" && echo "$directory/$1" && return 
+    directory="$directory/.."
+  done
+}
+
+CONFIG_XML=$(upsearch "config.xml")
+
+if [ -z "$CONFIG_XML" ]
+then 
+  echo "Must be run from within a Cordova project."
+  exit 1
+else
+  CORDOVA_ROOT=$(dirname "$CONFIG_XML")
+fi
+
+ENV="$CORDOVA_ROOT/.env"
+if [ -e "$ENV" ]
+then
+  source "$CORDOVA_ROOT/.env"
+fi
+
+: ${VERSION:="1.0.0"}
+TS=${1-`date +%s`}
+
+echo "Building $TS"
+
+ROOT=$CORDOVA_ROOT
+BIN=$ROOT/scripts
+
+fswatch -l 0.5 -o -e versioninfo "$ROOT"/src | xargs -n1 "$BIN"/build

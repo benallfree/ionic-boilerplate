@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.benallfree.boilerplate"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.benallfree.boilerplate"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.benallfree.boilerplate"
+        }
+    },
+    "dependent_plugins": {}
+}

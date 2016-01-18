@@ -1,3 +1,5 @@
+#!/usr/local/bin/node
+
 module.exports = function(context) {
     var util = require('util'),
     	fs = require('fs'),

@@ -1,9 +1,27 @@
-# Setup
+# Ionic Boilerplate for OS X
+
+Features:
+
+* Uses NPM only (no bower)
+* Lightning fast build scripts
+* OS X automation to launch Safari and simulator in debugging mode
+
+## Requirements
+
+* node v5
+* brew
+* fswatch
 
 `brew install fswatch`
 
-`npm install`
+## Setup
 
+### Clone the Repo
+
+    git clone git@github.com:benallfree/ionic-boilerplate.git
+    npm install
+
+### Configure the project
 
 Update `config.xml`
 
@@ -14,12 +32,23 @@ Update `config.xml`
   
 Update `ionic.project`
 
+Update `src/haml/index.haml`
+
+Update `src/haml/debug.haml`
+
+### Add a platform
+
 `ionic platform add ios`
 
-`ionic emulate ios`  
+
+## Building
+
+To build the entire system, run `./build.sh`
+
+To watch for source code changes and automatically re-launch the simulator on change, use `./watch.sh`
   
 # For production
 
 Update `config.xml`
 
-* <content src="...">
+* <content src="index.html">
