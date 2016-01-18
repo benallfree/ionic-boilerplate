@@ -1,0 +1,10 @@
+{
+  "in": [
+    "node_modules/ionic-sdk/release/css/ionic.css",
+    "src/scss/style.scss"
+  ],
+  "out": "build/css/all.css",
+  "sourcemaps": true,
+  "rebaseUrls": false,
+  "minifier": false
+}

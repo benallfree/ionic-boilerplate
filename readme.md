@@ -1,5 +1,7 @@
 # Setup
 
+`brew install fswatch`
+
 `npm install`
 
 

@@ -5,38 +5,18 @@
   "dependencies": {},
   "devDependencies": {
     "angular-ios9-uiwebview-patch": "^1.1.1",
+    "browserify": "^13.0.0",
+    "coffeeify": "^2.0.1",
     "cordova-build-increment": "0.0.5",
-    "del": "^2.2.0",
-    "gulp": "^3.9.0",
-    "gulp-browserify": "^0.5.1",
-    "gulp-clean": "^0.3.1",
-    "gulp-coffee": "^2.3.1",
-    "gulp-coffeeify": "^0.1.8",
-    "gulp-concat": "^2.6.0",
-    "gulp-continuous-concat": "^0.1.1",
-    "gulp-copy": "0.0.2",
-    "gulp-declare": "^0.3.0",
-    "gulp-haml": "^0.1.5",
-    "gulp-handlebars": "^4.0.0",
-    "gulp-iced-coffee": "github:doublerebel/gulp-iced-coffee",
-    "gulp-jst": "^0.1.1",
-    "gulp-minify-css": "^0.3.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-util": "^2.2.14",
-    "gulp-watch": "^4.3.5",
-    "gulp-wrap": "^0.11.0",
+    "hamljs-cli": "^1.0.0",
     "ionic-sdk": "^1.2.4",
     "ng-cordova": "^0.1.24-alpha",
-    "node-notifier": "^4.3.1",
-    "shelljs": "^0.3.0"
+    "pleeease-cli": "github:benallfree/pleeease-cli"
   },
   "cordovaPlugins": [
     "cordova-plugin-device",
-    "cordova-plugin-console"
+    "cordova-plugin-console",
+    "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [
     "ios"
