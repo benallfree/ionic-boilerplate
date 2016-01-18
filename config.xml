@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.yogainyourpark849679" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>YogaInYourPark</name>
+<widget id="com.benallfree.boilerplate" version="0.0.1" ios-CFBundleVersion="1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Boilerplate</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Description
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="ben@benallfree.com" href="http://www.benallfree.com">
+      Ben Allfree
     </author>
-  <content src="index.html"/>
+  <content src="debug.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
@@ -47,4 +47,7 @@
     <splash src="resources/ios/splash/Default@2x~iphone.png" height="960" width="640"/>
     <splash src="resources/ios/splash/Default~iphone.png" height="480" width="320"/>
   </platform>
+	<hook src="scripts/incrementBuildNum.js" type="before_emulate"/>
+	<hook src="scripts/incrementBuildNum.js" type="before_build"/>
+  
 </widget>
