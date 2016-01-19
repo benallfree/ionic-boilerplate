@@ -6,5 +6,6 @@
   "out": "build/css/all.css",
   "sourcemaps": true,
   "rebaseUrls": false,
-  "minifier": false
+  "minifier": false,
+  "sass": true
 }
