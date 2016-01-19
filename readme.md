@@ -25,16 +25,18 @@ Features:
 
 Update `config.xml`
 
-* <widget id="...">
-* <name>
-* <description>
-* <author>
+    <widget id="...">
+    <name>
+    <description>
+    <author>
   
 Update `ionic.project`
 
-Update `src/haml/index.haml`
+Update `src/haml/home.haml`
 
 Update `src/haml/debug.haml`
+
+`mkdir www`
 
 ### Add a platform
 
@@ -51,4 +53,4 @@ To watch for source code changes and automatically re-launch the simulator on ch
 
 Update `config.xml`
 
-* <content src="index.html">
+    <content src="index.html">
