@@ -15,11 +15,20 @@ app = angular.module('mainApp', [ 'ionic' ]).config(($interpolateProvider) ->
 )
 
 .config(($stateProvider, $urlRouterProvider) ->
-  $stateProvider.state 'home',
-    url: '/'
+  $stateProvider
+  .state('app',
+    url: '/app'
+    templateUrl: 'app.html'
+    controller: 'AppController'
+    abstract: true
+  )
+  .state( 'home',
+    url: '/home'
     templateUrl: 'home.html'
     controller: 'HomeController'
-  $urlRouterProvider.otherwise '/'
+    parent: app
+  )
+  $urlRouterProvider.otherwise '/app/home'
 )
 
 require('./controllers/AppController')(app)
