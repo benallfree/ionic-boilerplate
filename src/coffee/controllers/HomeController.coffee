@@ -1,3 +1,2 @@
-module.exports = (app)->
-  app.controller('HomeController', (($scope)->
-  ))
+module.exports = ($scope, $state) ->
+  console.log("HomeController loaded")

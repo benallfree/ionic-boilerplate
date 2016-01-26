@@ -1,4 +1,5 @@
-%ion-header-bar.bar-positive
-  %h1.title Boilerplate
-%ion-content.padding
-  This is a little sumpin' we call an app!
+%ion-view{'view-title': 'Boilerplate App'}
+  %ion-nav-buttons{side: "left"}
+    %button.button.button-icon.button-clear.ion-navicon{"ng-click": "toggleLeft()"}          
+  %ion-content.padding
+    This is a little sumpin' we call an app!

@@ -16,20 +16,32 @@ app = angular.module('mainApp', [ 'ionic' ]).config(($interpolateProvider) ->
 
 .config(($stateProvider, $urlRouterProvider) ->
   $stateProvider
+  
   .state('app',
     url: '/app'
     templateUrl: 'app.html'
-    controller: 'AppController'
+    controller: require('./controllers/AppController')
     abstract: true
   )
-  .state( 'home',
+  
+  .state( 'app.home',
     url: '/home'
     templateUrl: 'home.html'
-    controller: 'HomeController'
-    parent: 'app'
+    controller: require('./controllers/HomeController')
   )
+  
+  .state('app.settings',
+    url: '/settings'
+    template: '<ion-nav-view></ion-nav-view>'
+    controller: require('./controllers/Settings/RootController')
+    abstract: true
+  )
+  
+  .state('app.settings.general',
+    url: '/general'
+    templateUrl: 'settings/general.html'
+    controller: require('./controllers/Settings/GeneralController')
+  )
+  
   $urlRouterProvider.otherwise '/app/home'
 )
-
-require('./controllers/AppController')(app)
-require('./controllers/HomeController')(app)

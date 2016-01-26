@@ -1,0 +1,40 @@
+%ion-view
+  %ion-nav-title
+    Podcast Settings
+  %ion-nav-buttons{side: 'secondary'}
+    %button.button.button-assertive{'ng-click': 'cancel()', 'ng-if': 'has_changes'} Cancel
+  %ion-content.padding
+    .podcast-settings-view
+      %p This is your show. Your series. Your podcast.
+      .list.list-inset
+        %label.item.item-input
+          %span.input-label Title
+          %input{type: 'text', 'ng-model': 'show.title', autocapitalize: 'words'}
+        %label.item.item-input
+          %span.input-label Cover Art
+          %img{'ng-src': '<%logo_src%>', 'ng-if': 'logo_src', 'style': 'width: 75px; width: 75px; border-radius: 3px; margin-right: 10px; border: 1px solid rgb(213, 213, 213)'}
+          %button{'ng-click': 'do_logo()'} Choose
+        %label.item.item-input
+          %span.input-label Subtitle
+          %input{type: 'text', 'ng-model': 'show.subtitle'}
+        %label.item.item-input
+          %span.input-label Author
+          %input{type: 'text', 'ng-model': 'show.author'}
+        %label.item.item-input.item-select
+          .input-label
+            Category #1
+          %select{'ng-model': 'show.primary_category', 'ng-options': 'item.key as item.name for item in cats'}
+        %label.item.item-input.item-select
+          .input-label
+            Category #2
+          %select{'ng-model': 'show.secondary_category', 'ng-options': 'item.key as item.name for item in cats'}
+        .item.item-toggle
+          Explicit?
+          %label.toggle.toggle-balanced
+            %input{type: 'checkbox', 'ng-model': 'show.is_explicit'}
+            .track
+              .handle
+        %label.item.item-input
+          %textarea{'class': 'msd-elastic', placeholder: 'Show Description', 'ng-model': 'show.description'}
+      %button.button.button-block.button-balanced{"ng-click": "save()"}
+        Save
