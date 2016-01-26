@@ -26,7 +26,7 @@ app = angular.module('mainApp', [ 'ionic' ]).config(($interpolateProvider) ->
     url: '/home'
     templateUrl: 'home.html'
     controller: 'HomeController'
-    parent: app
+    parent: 'app'
   )
   $urlRouterProvider.otherwise '/app/home'
 )
